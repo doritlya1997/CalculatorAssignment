@@ -56,37 +56,6 @@ class Calculator:
 
     # returns calculation result
     def _compute(self, num1, num2, operator):
-        # def _pre_post_compute(num1, num2, isPreCompute):
-        #     # This function calculates the value of increment (i++/++i) and decrement (i--/--i)
-        #     for num in [num1, num2]:
-        #         print(f"processing {num}")
-        #         if type(num) not in [int, float] and not num.isnumeric():
-        #             print(f"{num} is not a number")
-        #             # handle increment (i++/++i)
-        #             if num.find("++") > -1:
-        #                 isPrefix = (num.find("++") == 0)
-        #                 varName = num.strip("+")
-        #                 print(f"isPrefix= {isPrefix} , isPreCompute= {isPreCompute}")
-        #
-        #                 # handle prefix (i++) and postfix (++i), like this:
-        #                 #
-        #                 # ++i: not(isPrefix=True  ^ isPreCompute=True)  = True -> change value before operation
-        #                 # i++: not(isPrefix=False ^ isPreCompute=False) = True -> change value after operation
-        #                 #
-        #                 # ++i: not(isPrefix=True  ^ isPreCompute=False) = False -> do not change value after operation
-        #                 # i++: not(isPrefix=False ^ isPreCompute=True)  = False -> do not change value before operation
-        #                 if not (isPrefix ^ isPreCompute):
-        #                     self._assign(varName, "+=", 1)
-        #
-        #             # handle decrement (i--/--i)
-        #             elif num.find("--") > -1:
-        #                 isPrefix = (num.find("--") == 0)
-        #                 varName = num.strip("-")
-        #
-        #                 # handle prefix (i--) and postfix (--i)
-        #                 if not (isPrefix ^ isPreCompute):
-        #                     self._assign(varName, "-=", 1)
-
         match operator:
             case '+':
                 # _pre_post_compute(num1, num2, isPreCompute=True)
